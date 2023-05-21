@@ -1,0 +1,49 @@
+@use '../../components/buttons' as button;
+@use '../../components/details';
+
+.kwadrat-container {
+    border: 1px solid #93947c;
+    margin: 0.5rem 0 0 0;
+    margin-top: 80px;
+    margin-left: 370px;
+    margin-right: 300px;
+    margin-bottom: 120px;
+    display: grid;
+    grid-template-columns: 10rem 10rem 10rem 10rem 16rem;
+    font-size: clamp(10px, 8vw, 22px);
+}
+
+.about__inner {
+    width: 100%;
+    font-size: clamp(10px, 5vw, 22px);
+}
+    
+.kwadrat {
+    font-size: clamp(10px, 8vw, 20px);
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.guzik {
+    font-size: clamp(10px, 8vw, 2p2x);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+    color: black;
+}
+
+.miejsce {
+    border: 2px solid #93947c;
+    position: absolute;
+    margin-top: 14px;
+    margin-left: 700px;
+    cursor: pointer;
+    :hover {
+        color: #93947c;
+     }
+}

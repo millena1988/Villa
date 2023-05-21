@@ -1,0 +1,42 @@
+@mixin separator( $align: left, $margin: var(--gap-m) ) {
+    &:after {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 64px;
+        background-color: rgb(147, 148, 124, 0.3);
+        margin-top: $margin;
+        margin-bottom: $margin;
+
+        @if $align == center {
+            margin: $margin auto;
+        }
+
+    }
+ 
+}
+
+@mixin separator-dots() {
+        &::after {
+            content: url('assets/icons/icon-divider.svg');
+            display: block;
+            margin-top: var(--gap-s);
+        }
+}
+
+@mixin frame($color: rgb(147, 148, 124, 0.3), $margin: 12px) {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        border: 1px solid $color;
+        top: $margin;
+        bottom: $margin;
+        left: $margin;
+        right: $margin;
+        opacity: 0.34;
+    }
+
+}

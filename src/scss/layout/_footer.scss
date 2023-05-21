@@ -1,0 +1,131 @@
+.site-footer {
+    background-color: #1b1a1a;
+    display: grid;
+    margin-top: 600px;
+    min-height: 1150px;
+    width: 100%;
+    font-size: clamp(10px, 8vw, 20px);
+    
+    &__content {
+        text-align: center;
+        width: 100%;
+        height: calc(100% - 55px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: clamp(10px, 8vw, 20px);
+        
+        p { 
+            color: var(--color-light);
+            &:first-of-type {
+               
+            }
+        }
+    }
+
+    &__copyright {
+        color: var(--color-dark-500);
+        margin-top: 180px;
+        margin-left: -80px;
+        font-size: 15px;
+    }
+}
+
+.footer__video {
+        position: absolute;
+        height: 50%;
+        width: 100%;
+        left: 0;
+        margin-top: 0;
+        margin-bottom: 100px;
+        object-fit: cover;
+        background-color: #1b1a1a;
+        transform: scale(1.0);
+        padding: 0 0.1em;
+        font-size: clamp(10px, 8vw, 20px);
+    }
+
+
+.zawartosc {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-size: clamp(10px, 8vw, 20px);
+}
+
+.za1 {
+    margin-top: 600px;
+    margin-left: 1250px;
+}
+
+.stopka__naglowki {
+    display: grid;
+    grid-template-columns: 600px 600px;
+    margin-top: 150px;
+    margin-left: -1000px;
+    margin-bottom: 0;
+}
+
+.naglowek {
+    margin-top: 400px;
+    margin-left: 200px;
+    color: #93947c;
+    font-size: 30px;
+}
+
+.nag__tekst {
+    color: #DDD;
+    font-size: 11px;
+    margin-left: 100px;
+}
+
+.spolecznosci {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 150px;
+    gap: 15px;
+    cursor: pointer;
+    
+}
+
+.tekst__tresc {
+    font-size: 15px;
+    color: #DDD;
+    margin-top: 50px;
+}
+
+.adres {
+    margin-top: -200px;
+    margin-right: -1100px;
+    gap: 15px;
+}
+
+.adres__tekst {
+    color: #DDD;
+    font-size: 17px;
+    margin-top: -48px;
+    margin-right: -300px;
+}
+
+.adres__2 {
+    margin-top: 25px;
+    margin-left: 0;
+}
+
+.adres__mobil {
+    color: #DDD;
+    font-size: 17px;
+    margin-top: -35px;
+    margin-left: 305px;
+}
+
+#map {
+    width: 400px;
+    height: 370px;
+    border-radius: 50%;
+    background-image: url(assets/images/map@2x.png);
+    margin-top: 500px;
+    margin-left: 1180px;
+}

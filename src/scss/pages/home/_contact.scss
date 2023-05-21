@@ -1,0 +1,153 @@
+@use '../../components/details';
+@use '../../utilities/responsive';
+
+.contact {
+    display: grid;
+    grid-template-rows: 500px 500px;
+    padding: 0 1em;
+    max-width: 75rem;
+}
+
+.contact-card {
+    text-align: center;
+    max-width: 460px;
+    height: 400px;
+    width: 100%;
+    margin-top: 100px;
+    margin-left: 300px;
+    gap: 100px;
+
+        &__title {
+            @include details.separator($align: center);
+            font-size: 20px;
+        }
+
+        &__text {
+            @include details.separator-dots;
+            strong {
+                font-weight: 600;
+            }
+
+            &:last-of-type {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+
+        @include responsive.max(64rem) {
+            flex: 1;
+            max-width: 100%;
+        }
+}
+
+.opinie__tytul {
+    font-size: 30px;
+    font-family: var(--font-sans);
+    color: #93947c;
+    margin-left: 160px;
+    margin-top: 180px;
+}
+
+.opinie {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    margin-top: -350px;
+    gap: 100px;
+ }
+
+.opinia {
+    margin-top: 80px;
+}
+
+.col {
+    border: 1px solid rgb(147, 148, 124, 0.3);
+    width: 300px;
+    height: 440px;
+}
+
+.zdjecie img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+
+.name{
+    font-size: clamp(10px, 8vw, 20px);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+.stars__opinie {
+    
+    margin-top: -230px;
+    margin-bottom: 30px;
+}
+
+.formularz {
+    position: absolute;
+    margin-bottom: 600px;
+    margin-left: 300px;
+    
+    @include responsive.max(62.5rem) {
+        padding: 16px;
+    }
+    
+}
+
+.contact-form {
+    margin-left: 100px;
+    flex: 0 1 50%;
+    margin-top: 750px;
+    margin-left: 300px;
+    
+
+        &__title {
+            @include details.separator;
+            font-size: clamp(var(--font-size-2), 8vw, var(--font-size-4));
+        }
+
+        input, textarea {
+            @include responsive.max(40rem) {
+                --gap-m: 1rem;
+            }
+            margin-bottom: var(--gap-m);
+            border: 1px solid rgb(147, 148, 124, 0.3);
+        }
+
+        textarea {
+            resize: none;
+            border: 1px solid rgb(147, 148, 124, 0.3);
+            
+        }
+
+        &__row {
+            display: flex;
+            gap: var(--gap-l);
+            
+            
+        }
+
+        @include responsive.max(64rem) {
+            flex: 1;
+            width: 100%;
+            padding-right: var(--gap-l);
+        }
+        
+        @include responsive.max(40rem) {
+            padding-left: var(--gap-s);
+            padding-right: var(--gap-s);
+
+            &__row {
+                gap: var(--gap-s);
+                
+                
+            }
+        }
+
+        @include responsive.max(30rem) {
+            &__row {
+                display: block;
+            }
+        }
+}
